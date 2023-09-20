@@ -1,9 +1,10 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background-image: url(../assets/back.jpg);
+    font-family: "Times New Roman", Times, serif;
+    background-image: url(../assets/back.jpeg);
     /* background-size: cover; */
+    background-attachment: fixed;
     background-size: 100vw 100vh;
 }
 
@@ -33,9 +34,9 @@ body{
   }
   
   #logo img{
-    height: 3rem;
-    margin-top: 1.5rem;
-    margin-right: 1rem;
+    height: 4rem;
+    margin-top: 0.5rem;
+    margin-right: 2rem;
     
   }
   
@@ -54,19 +55,25 @@ body{
   margin-top: 2rem;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
-  background-color: rgb(226, 205, 226);
+  grid-template-columns: repeat(4,2);
+  justify-content: center;
+  background-color: none;
 }
 
 .recipe img {
-  width: 15rem;
+  display: block;
+  margin: auto;
+  width: 20rem;
+  grid-template-columns: auto;
   border-radius: 50%;
+  justify-content: center;
 }
 
 .recipe {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   align-items: center;
 }
 
@@ -76,13 +83,15 @@ body{
 }
 
 .region {
-  padding: 0;
+  padding: 1rem;
   margin: 0.5rem;
 }
 
 .recipe a {
   text-decoration: none;
-  color:  rgb(226, 205, 226);
+  justify-content: center;
+  text-align: center;
+  color:  #111;
 }
 
 /* fav button style */
@@ -115,3 +124,84 @@ body{
       background-color:  rgb(226, 205, 226);
     }
 }  
+footer{
+  background-color: none;
+}
+  .footerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .socialIcons{
+    display: flex;
+    justify-content: center;
+  
+  }
+  .socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  .socialIcons a i{
+    font-size: 2 rem;
+    color: black;
+    opacity: 0.9;
+  }
+  /*Hover Effects on Soial Media Icons */
+  .socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+  }
+  .socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+
+  }
+  .footerNav{
+    margin: 30px 0;
+
+  }
+  .footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  .footerNav ul li a{
+    color: #111;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  .footerNav ul li a:hover{
+    opacity: 1;
+  }
+
+  #footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+  }
+  .footerBottom p{
+    color: black;
+  }
+  .designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;;
+  }
+  @media (max-width:700px) {
+    .footerNav ul{
+      flex-direction: column;
+    }
+    .footerNav ul li{
+      width: 100%;
+      text-align: center;
+      margin: 10px;
+    }
+  }
